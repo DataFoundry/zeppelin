@@ -13,6 +13,10 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+if [ ${SPARKBSI} ]; then
+    eval SPARK_MASTER=\$BSI_${SPARKBSI}_HOST
+fi
+
 
 export MASTER="spark://${SPARK_MASTER}:7077"
 export SPARK_HOME=/opt/spark
