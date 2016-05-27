@@ -3,11 +3,13 @@
 ##  构建spark基础镜像  
 oc new-build https://github.com/datafoundry/zeppelin.git --context-dir=spark  
 
-##  基于spark基础镜像构建zeppelin镜像  
-oc new-app https://github.com/datafoundry/zeppelin.git --context-dir=zeppelin  
-
 ##  生成spark后端服务
  oc new-backingserviceinstance spark-inst --backingservice_name=spark --planid=BackingServicePlanGuid  
 
+##  基于spark基础镜像构建zeppelin镜像  
+oc new-app https://github.com/datafoundry/zeppelin.git --context-dir=zeppelin  
+
+
 ##  讲spark服务绑定到zeppelin应用中
  oc bind spark-inst zeppeline
+ oc env dc/zeppelin SPARKBSI=spark-inst
