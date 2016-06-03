@@ -12,4 +12,4 @@ oc new-app https://github.com/datafoundry/zeppelin.git --context-dir=zeppelin
 
 ##  讲spark服务绑定到zeppelin应用中
  oc bind spark-inst zeppeline  
- oc env dc/zeppelin SPARKBSI=spark-inst BSITYPE=SPARK
+ oc env dc/zeppelin SPARKBSI=spark-inst BSITYPE=SPARK_
