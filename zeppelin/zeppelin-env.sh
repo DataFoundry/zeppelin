@@ -14,8 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 if [[ -n "${SPARKBSI}" ]]; then
-    eval SPARK_MASTER=\$BSI_${SPARKBSI}_HOST
-    eval SPARK_SECRET=\$BSI_${SPARKBSI}_PASSWORD
+    eval SPARK_MASTER=\$BSI_${BSITYPE}${SPARKBSI}_HOST
+    eval SPARK_SECRET=\$BSI_${BSITYPE}${SPARKBSI}_PASSWORD
 fi
 
 
