@@ -22,7 +22,8 @@ ENV ZEPPELIN_VER  0.6.0
 RUN mkdir -p /opt && \
     cd /opt && \
 #    curl http://www.us.apache.org/dist/incubator/zeppelin/${ZEPPELIN_VER}/zeppelin-${ZEPPELIN_VER}-bin-all.tgz | \
-     curl http://mirrors.aliyun.com/apache/zeppelin/zeppelin-${ZEPPELIN_VER}/zeppelin-${ZEPPELIN_VER}-bin-all.tgz | \
+#     curl http://mirrors.aliyun.com/apache/zeppelin/zeppelin-${ZEPPELIN_VER}/zeppelin-${ZEPPELIN_VER}-bin-all.tgz | \
+     curl https://s3.cn-north-1.amazonaws.com.cn/datafoundry/base_software/zeppelin-0.5.6-incubating-bin-all.tgz | \
         tar -zx && \
     ln -s zeppelin-${ZEPPELIN_VER}-bin-all zeppelin && \
     echo Zeppelin ${ZEPPELIN_VER} installed in /opt
