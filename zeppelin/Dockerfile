@@ -17,7 +17,7 @@
 
 FROM  spark
 
-ENV ZEPPELIN_VER  0.6.0
+ENV ZEPPELIN_VER  0.5.6-incubating
 
 RUN mkdir -p /opt && \
     cd /opt && \
